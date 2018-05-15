@@ -187,6 +187,7 @@ header .second_line .menu li {
 header .second_line .menu a {
     display: inline-block;
     font-size: 14px;
+    color: rgb(0, 38, 73);
     font-family: "ProximaNovaCond";
     font-weight: 400;
     text-transform: uppercase;
@@ -217,6 +218,7 @@ header .second_line .submenu li a {
     background-color: #ffffff;
     width: 90px;
     font-size: 14px;
+    color: rgb(0, 38, 73);
     font-family: "ProximaNovaCond";
     font-weight: 400;
     text-transform: uppercase;
@@ -234,6 +236,7 @@ header .second_line .submenu li a {
     text-decoration: none;
     outline: none;
     font-size: 17px;
+    color: rgb(0, 38, 73);
     font-family: "ProximaNovaCond";
     font-weight: 700;
     text-align: center;
