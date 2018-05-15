@@ -127,23 +127,27 @@ header .first_line .institut_name {
 }
 
 header .first_line .phone {
+    box-sizing: border-box;
+    width: 210px;
     font-size: 18px;
     color: rgb(255, 255, 255);
     font-weight: 700;
     text-decoration: none;
     position: relative;
-    padding: 4px 0 7px 48px;
-    letter-spacing: 1.5px;
+    text-align: right;
+    padding: 4px 0 8px 30px;
+    letter-spacing: 0.8px;
 }
 
 header .phone::before {
     content: "";
     background-image: url(../images/sprites.svg);
-    background-position: -164px -22px;
-    width: 30px;
-    height: 27px;
+    background-position: -166px -18px;
+    width: 27px;
+    height: 36px;
     position: absolute;
     left: 0;
+    top: 0;
 }
  
 header .second_line {
@@ -163,13 +167,13 @@ header .second_line .logo {
     background-image: url(../images/sprites.svg);
     background-position: -8px -2px;
     width: 127px;
-    height: 60px;
+    height: 66px;
 }
 
 header .second_line .menu {
     display: block;
     padding: 0;
-    margin: 15px 0 12px 36px;
+    margin: 0 0 0 36px;
 }
 
 header .second_line .menu:after{
@@ -192,7 +196,7 @@ header .second_line .menu a {
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 10px 8px;
+    padding: 25px 8px 22px;
 }
 
 header .second_line .submenu {
@@ -228,61 +232,69 @@ header .second_line .submenu li a {
 }
 
 .button {
-    display:block;
+    display:inline-block;
     box-sizing: border-box;
-    border: solid 2px rgb(0, 38, 73);
+    font-family: "ProximaNovaCond";
+    font-size: 17px;
+    font-weight: 400;
+    border: none;
+    border-radius: 2px;
+    padding: 15px 5px;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
     outline: none;
-    font-size: 17px;
     color: rgb(0, 38, 73);
-    font-family: "ProximaNovaCond";
-    font-weight: 700;
     text-align: center;
 }
 
 .call.button {
+    font-weight: 700;
     width: 210px;
+    border: solid 2px rgb(0, 38, 73);
+    border-radius: 0;
     padding: 8px;
     margin: auto 0 auto auto;
 }
 
 /*main_screen*/
+
 .main_screen {
     position: relative;
 }
 
-.main_screen .background {
-    position: absolute;
+.main_screen .background {   
     background-color: rgb(37, 139, 232);
-    background-position: center center;
-    background-size: cover;
-    height: 447px;
+    position: absolute;
+    top:0; 
+    bottom:0; 
     width: 100%;
 }
 
 .main_screen .wrapper {
-    padding: 5px 40px;
+    position: relative;
 }
 
 .main_screen .login.button {
     border: 2px solid rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.6);
     width: 210px;
+    font-family: 'ProximaNova';
     font-size: 10px;
-    font-family: "ProximaNova";
-    font-weight: 400;
     line-height: 1.7;
     padding: 12px 5px;
-    margin: 0 0 40px auto;
-    position: relative;
+    float: right;
+    margin-top: 5px;
 }
 
 .main_screen .login.button span {
     font-family: "ProximaNovaCond";
     font-size: 14px;
     font-weight: 700;
+}
+
+.main_screen .main_info {
+    padding: 111px 0 127px;
 }
 
 .main_screen h1 {
@@ -293,7 +305,6 @@ header .second_line .submenu li a {
     text-transform: uppercase;
     text-align: center;
     margin: 0;
-    position: relative;
 }
 
 .main_screen h2 {
@@ -303,40 +314,268 @@ header .second_line .submenu li a {
     color: rgb(255, 255, 255);
     text-align: center;
     margin: 15px 0;
-    position: relative;
 }
 
 .main_screen .buttons {
+    text-align: center;
+    margin: 50px auto 0;
+}
+
+.green.button {
+    background-color: #eaff00;
+    box-shadow: 0 4px #c4d600;
+    width: 330px;
+}
+
+.main_screen .buttons .green.button {
+    margin-right: 20px;
+}
+
+.orange.button {
+    background-color: #ffc000;
+    box-shadow: 0 4px #e0a900;
+    width: 330px;
+}
+
+/*courses*/
+
+.courses .courses_wrapper {
     display: flex;
     flex-wrap: wrap;
-    max-width: 700px;
-    margin: 50px auto 0;
+    justify-content: space-between;
+}
+
+.courses .sidebar {
+    max-width: 400px;
+    box-sizing: border-box;
+    box-shadow: 4px 0px 4px -4px rgba(0, 0, 0, 0.2);
+    padding: 30px 17px 75px 0; 
+}
+
+.courses .courses_menu {
+    display: block;
+    margin: 0 0 35px 0;
+    padding: 0;
+}
+
+.courses .courses_menu li {
+    list-style: none;
+    margin: 23px 0;
     position: relative;
 }
 
-.main_screen .buttons .button_wr {
-    box-sizing: border-box;
-    width: 50%;
-    padding: 0 10px;
-}
-
-.main_screen .buttons .button {
+.courses .courses_menu a {
+    display: block;
+    font-size: 17px;
+    color: rgb(0, 38, 73);
+    font-family: "ProximaNovaCond";
     font-weight: 400;
-    border: none;
-    border-radius: 2px;
-    padding: 15px 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 10px 20px 60px;
 }
 
-.main_screen .buttons .first.button {
-    background-color: #eaff00;
-    box-shadow: 0 4px #c4d600;
+.courses .courses_menu a::before {
+    content: "";
+    background-image: url(../images/sprites.svg);
+    background-position: -242px -14px;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 10px;
 }
 
-.main_screen .buttons .second.button {
-    background-color: #ffc000;
-    box-shadow: 0 4px #e0a900;
+.courses .courses_menu .psychology a::before {
+    background-position: -300px -14px;
 }
 
+.courses .courses_menu .pedagogy a::before {
+    background-position: -358px -14px;
+}
+
+.courses .courses_menu .before_school a::before {
+    background-position: -417px -14px;
+}
+
+.courses .courses_menu .additional a::before {
+    background-position: -475px -14px;
+}
+
+.courses .courses_menu .organisation a::before {
+    background-position: -533px -14px;
+}
+
+.courses .details {
+    max-width: 800px;
+    padding: 57px 0;
+}
+
+.courses .details h3 {
+    font-size: 24px;
+    font-family: "ProximaNovaCond";
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 7px 0;
+}
+
+/*radio_button*/
+
+.courses .details .radio_buttons {
+    background-color: #efefef;
+    padding: 15px 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.courses .details .wpcf7-list-item {
+    padding: 0 13px 0 51px;
+}
+
+.courses .details .wpcf7-list-item input[type="radio"] {
+    display: none;
+}
+
+.courses .details .wpcf7-list-item .radio_ripple {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(0, 38, 73);;
+    position: relative;
+    margin: 0 5px 0 -30px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    -webkit-transition: border-color 0.2s ease-in 0s;
+    transition: border-color 0.2s ease-in 0s;
+}
+
+.courses .details .wpcf7-list-item .radio_ripple:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 38, 73);
+    border-radius: 50%;
+    z-index: 1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+}
+
+.courses .details .wpcf7-list-item .radio_ripple:after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    left: -15px;
+    right: -15px;
+    margin: auto;
+    width: 0;
+    height: 0;
+    background: rgba(0, 38, 73, 0.26);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.courses .details  .wpcf7-list-item.active .radio_ripple{
+	border-color: rgb(0, 38, 73);
+}
+
+.courses .details  .wpcf7-list-item.active .radio_ripple:before{
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+}
+
+.courses .details  .wpcf7-list-item.active .radio_ripple:after{
+	-webkit-animation: ripple 0.3s ease-out;
+	animation: ripple 0.3s ease-out;
+}
+
+@-webkit-keyframes ripple {
+	from {width:0;height:0;opacity:1;}
+	to {width:47px;height:47px;opacity:0;}
+}
+@keyframes ripple {
+	from {width:0;height:0;opacity:1;}
+	to {width:47px;height:47px;opacity:0;}
+}
+
+.courses .details .wpcf7-list-item .wpcf7-list-item-label {
+    font-size: 16px;
+    font-family: "ProximaNovaCond";
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.courses .details .line {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding: 20px 0;
+    letter-spacing: 0.45px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.courses .details .line .name {
+    width: 465px;
+}
+
+.courses .details .line .hours {
+    width: 85px;
+}
+
+.courses .details .line .price {
+    width: 115px;
+    position: relative;
+}
+
+.courses .details .line a {
+    display: block;
+    width: 100px;
+    text-align: right;
+}
+
+.courses .details .discount.line .price::before {
+    content: "-13%";
+    position: absolute;
+    top: -17px;
+    right: 13px;
+    font-size: 12px;
+    font-weight: 400;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 1px 4px;
+    background-color: rgb(234, 255, 0);
+}
+
+.courses .details .discount.line .price::after {
+    content: "80 000 руб";
+    position: absolute;
+    bottom: -18px;
+    right: 35px;
+    width: 70px;;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(138, 138, 138);
+    text-decoration: line-through;
+}
+
+/*steps_screen*/
+
+.steps_screen {
+    background-color: aqua;
+    height: 300px;
+}
 
 
 
