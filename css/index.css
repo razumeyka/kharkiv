@@ -543,6 +543,7 @@ header .second_line .submenu li a {
     display: block;
     width: 100px;
     text-align: right;
+    color: rgb(32, 129, 218);
 }
 
 .courses .details .discount.line .price::before {
