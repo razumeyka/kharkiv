@@ -80,6 +80,14 @@
 
 @font-face {
   font-family: 'ProximaNovaExCn';
+  src: url('../fonts/ProximaNovaExCn-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNovaExCn-Regular.otf')  format('opentype'),
+	     url('../fonts/ProximaNovaExCn-Regular.woff') format('woff'), url('../fonts/ProximaNovaExCn-Regular.ttf')  format('truetype'), url('../fonts/ProximaNovaExCn-Regular.svg#ProximaNovaExCn-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNovaExCn';
   src: url('../fonts/ProximaNovaExCn-Semibold.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNovaExCn-Semibold.otf')  format('opentype'),
 	     url('../fonts/ProximaNovaExCn-Semibold.woff') format('woff'), url('../fonts/ProximaNovaExCn-Semibold.ttf')  format('truetype'), url('../fonts/ProximaNovaExCn-Semibold.svg#ProximaNovaExCn-Semibold') format('svg');
   font-weight: 600;
@@ -124,6 +132,7 @@ header .first_line {
 
 header .first_line .institut_name {
     padding: 8px 0;
+    letter-spacing: 0.4px;
 }
 
 header .first_line .phone {
@@ -170,6 +179,8 @@ header .second_line .logo {
     height: 66px;
 }
 
+/*navbar*/
+
 header .second_line .menu {
     display: block;
     padding: 0;
@@ -186,6 +197,10 @@ header .second_line .menu li {
     list-style: none;
     float: left;
     position: relative;
+}
+
+header .second_line .menu .for_mobile {
+    display: none;
 }
 
 header .second_line .menu a {
@@ -230,6 +245,60 @@ header .second_line .submenu li a {
     text-align: center;
     padding: 10px;
 }
+
+/*burger*/
+
+.burger_wrapper {
+    display: none;
+    background-color: #ffffff;
+    height: 44px;
+}
+.burger {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 9px;
+    cursor: pointer;
+}
+
+.burger span, .burger span::before, .burger span::after {
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 4px;
+    width: 36px;
+    background: rgb(0, 38, 73);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    transition: all 200ms ease-in-out;
+}
+
+.burger span::before {
+    content: '';
+    left: 0;
+}
+
+.burger span::after {
+    content: '';
+    left: 0;
+    top: 20px;
+}
+
+.burger.active span {
+    background-color: transparent;
+}
+    
+ .burger.active span::before  {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+ .burger.active span::after  {
+    transform: rotate(-45deg);
+    top: 8px;
+}       
 
 .button {
     display:inline-block;
@@ -360,7 +429,7 @@ header .second_line .submenu li a {
 
 .courses .courses_menu li {
     list-style: none;
-    margin: 23px 0;
+    margin: 23px 0 29px;
     position: relative;
 }
 
@@ -372,7 +441,8 @@ header .second_line .submenu li a {
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 20px 10px 20px 60px;
+    padding: 19px 10px 17px 60px;
+    letter-spacing: 0.4px;
 }
 
 .courses .courses_menu a::before {
@@ -430,7 +500,7 @@ header .second_line .submenu li a {
 }
 
 .courses .details .wpcf7-list-item {
-    padding: 0 13px 0 51px;
+    padding: 10px 13px 10px 51px;
 }
 
 .courses .details .wpcf7-list-item input[type="radio"] {
@@ -528,6 +598,7 @@ header .second_line .submenu li a {
 
 .courses .details .line .name {
     width: 465px;
+    flex: 1;
 }
 
 .courses .details .line .hours {
@@ -571,12 +642,188 @@ header .second_line .submenu li a {
     text-decoration: line-through;
 }
 
+.courses .mobile.button {
+    display: none;
+    margin: 0 auto 30px;
+}
+
 /*steps_screen*/
 
 .steps_screen {
-    background-color: aqua;
-    height: 300px;
+    background-color: #57aeff;
 }
+
+.steps_screen .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.steps_screen .left_part {
+    box-sizing: border-box;
+    padding: 56px 0 34px;
+}
+
+.steps_screen h3 {
+    font-size: 34px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    max-width: 600px;
+}
+
+.steps_screen h3 span {
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.steps_screen .steps {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px -15px 0;
+}
+
+.steps_screen .steps .step {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 0 15px 37px;
+    text-align: center;
+}
+
+.steps_screen .steps .icon {
+    background-image: url(../images/sprites.svg);
+    background-position: -9px -106px;
+    width: 102px;
+    height: 102px;
+    margin: 0 auto;
+}
+
+.steps_screen .steps .two .icon {
+    background-position: -132px -106px;
+}
+
+.steps_screen .steps .three .icon {
+    background-position: -275px -106px;
+}
+
+.steps_screen .steps .four .icon {
+    background-position: -408px -106px;
+}
+
+.steps_screen .steps .five .icon {
+    background-position: -540px -106px;
+}
+
+.steps_screen .steps .what_to_do {
+    display: inline-block;
+    background-color: #eaff00;
+    font-size: 24px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 15px 0;
+    padding: 0 15px;
+}
+
+.steps_screen .steps .what_to_do span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.steps_screen .steps .how_to_do {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.steps_screen .steps .arrow {
+    background-image: url(../images/sprites.svg);
+    background-position: -1px -268px;
+    width: 244px;
+    height: 200px;
+    margin-left: 22px;
+}
+
+.steps_screen .right_part {
+    position: relative;
+    padding: 70px 0;
+}
+
+.steps_screen .form {
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    max-width: 360px;
+    padding: 62px 35px 52px;
+    position: relative;
+    z-index: 1;
+}
+
+.steps_screen .form .caption {
+    font-size: 30px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.steps_screen .form .after_caption {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(107, 107, 107);
+    text-align: justify;
+    letter-spacing: 0.1px;
+    margin: 9px 0 20px;
+    line-height: 1.3;
+}
+
+.steps_screen .form .wpcf7-form-control-wrap {
+    display: block;
+    margin: 13px 0;
+}
+
+.steps_screen .form .wpcf7-form-control {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 2px;
+    height: 56px;
+    width: 100%;
+    font-size: 20px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 400;
+    color: rgb(131, 131, 131);
+    text-transform: uppercase;
+    outline: none;
+    padding: 10px 20px;
+}
+
+.steps_screen .form .button {
+    width: 100%;
+    border: 1px solid rgb(196, 214, 0);
+    box-shadow: 0 5px #c4d600;
+    padding: 17px 5px;
+    font-size: 24px;
+    font-family: "ProximaNovaExCn";
+}
+
+.steps_screen .form input:not([type=submit]):focus {
+	border: 1px solid #000082;
+}
+
+.steps_screen .background {   
+    background: url(../images/pattern.png) #ffc000;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 178px;
+    width: 500%;
+}
+
 
 
 
@@ -586,14 +833,179 @@ header .second_line .submenu li a {
     .wrapper {
         padding: 0 15px;
     }
+    
+    .navbar, .call.button, .login.button {
+        display: none;
+    }
+    
+    header .second_line .burger_wrapper {
+        display: block;
+    }
+    
+    header .second_line .menu {
+        position: absolute;
+        top: 66px;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        background: #ffc000;
+    }
+    
+    header .second_line .menu .for_mobile {
+        display: block;
+    }
+    
+    header .second_line .menu li {
+        float: none;
+    }
+    
+    header .second_line .menu li a {
+        display: block;
+        padding: 22px 0;
+        border-bottom: 1px solid #e0a900;
+        color: #fff;
+    }
+    
+    header .second_line .menu li:hover .submenu {
+        position: static;
+    }
+    
+    header .second_line .submenu li a {
+        width: 100%;
+        color: #e0a900;
+    }
+    
+    .main_screen .main_info {
+        padding: 68px 0 82px;
+    }
+    
+    .main_screen h1 {
+        font-size: 34px;
+    }
+    
+    .courses .sidebar {
+        max-width: 1279px;
+        box-shadow: none;
+        padding: 0;
+        margin: 15px 0;
+    }
+    
+    .courses .courses_menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+    }
+    
+    .courses .courses_menu li {
+        box-sizing: border-box;
+        width: 33.333%;
+        padding: 0 5px;
+        margin: 5px 0;
+    }
+    
+    .courses .courses_menu a {
+        border: 1px solid rgb(196, 196, 196);
+        font-size: 15px;
+        padding: 19px 10px 17px 70px;
+    }
+    
+    .courses .courses_menu a::before {
+        left: 20px;
+    }
+    
+    .courses .sidebar .button {
+        display: none;
+    }
+    
+    .courses .mobile.button {
+        display: block;
+    }
+    
+    .courses .details {
+        width: 100%;
+        max-width: 1279px;
+        padding: 15px 0 40px;
+    }  
 }
 
 @media screen and (max-width: 1023px) {
-
+    .courses .courses_menu li {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 767px) {
+    .between {
+        justify-content: center;
+    }
+    
+    header .first_line .institut_name {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
+    
+    .main_screen .main_info {
+        padding: 68px 0 50px;
+    }
+    
+    .main_screen h1 {
+        font-size: 30px;
+    }
+    
+    .main_screen h2 {
+        font-size: 22px;
+        margin: 25px 0 32px;
+    }
+    
+    .main_screen .buttons {
+        margin: 0 auto;
+    }
+    
+    .orange.button, .green.button{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .courses .courses_menu li {
+        width: 100%;
+    }
+    
+    .courses .details h3 {
+        font-size: 22px;
+        margin: 0;
+    }
+    
+    .courses .details .radio_buttons {
+        padding: 15px 10px;
+        margin: 13px 0 9px;
+    }
+    
+    .courses .details .wpcf7-list-item {
+        display: block;
+        text-align: left;
+        padding: 10px 13px 10px 33px;
+    }
+    
+    .courses .details .wpcf7-list-item .wpcf7-list-item-label {
+        font-size: 14px;
+    }
+    
+    .courses .details .line {
+        font-size: 14px;
+        padding: 17px 0 15px;
+    }
+    
+    .courses .details .line .name {
+        width: 100%;
+        flex: auto;
+        margin-bottom: 10px;
+    }
 
+    .courses .details .line a {
+        flex: 1;
+    }
 }
 
 @media screen and (max-width: 639px) {
