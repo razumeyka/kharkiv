@@ -1,19 +1,24 @@
 $(document).ready(function(){    
-    $('.wpcf7-list-item input[checked="checked"]').closest('.wpcf7-list-item').addClass('active');
+    $('.radio_button input[checked="checked"]').closest('.radio_button').addClass('active');
 
-    $('.wpcf7-list-item').click(function(){
-        $(this).parent().find('.wpcf7-list-item').removeClass('active');
+    $('.radio_button').click(function(){
+     $(this).parent().find('.radio_button').removeClass('active');
         $(this).addClass('active');
         $(this).parent().addClass('changed');
     });
+
     
     $( '.burger' ).click( function() {
         if ( $( '.navbar' ).is( ':hidden' ) ) {
     $( '.navbar' ).show('slideToggle');
-    $( ".burger" ).addClass( "active" );
+    $( '.burger' ).addClass( 'active' );
         } else {
     $( '.navbar' ).hide('slideToggle');
-    $( ".burger" ).removeClass( "active" );
+    $( '.burger' ).removeClass( 'active' );
         }
+    });
+    
+    $('.second_line .menu li' ).click(function(){
+        $(this).find('.submenu').slideToggle(500);
     });
 });
