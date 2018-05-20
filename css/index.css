@@ -183,7 +183,8 @@ header .second_line .wrapper {
     flex-wrap: wrap;
 }
 
-header .second_line .logo {
+.logo {
+    display: inline-block;
     background-image: url(../images/sprites.svg);
     background-position: -8px -2px;
     width: 127px;
@@ -686,15 +687,24 @@ h3 {
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
+    text-align: center;
 }
 
 h3 span {
     box-sizing: border-box;
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 600;
     letter-spacing: 2px;
     margin-right: 15px;
     position: relative;
+}
+
+.steps_screen h3 {
+    text-align: left;
+}
+
+.steps_screen h3 span {
+    font-size: 46px;
 }
 
 h3 span::before {
@@ -795,16 +805,17 @@ h3 span::before {
     position: relative;
     padding: 70px 0;
     max-width: 360px;
+    margin-left: 40px;
 }
 
-.steps_screen .form {
+.form {
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
     padding: 62px 35px 52px;
     position: relative;
 }
 
-.steps_screen .form .caption {
+.form .caption {
     font-size: 30px;
     font-family: "ProximaNovaExCn";
     font-weight: 600;
@@ -813,7 +824,7 @@ h3 span::before {
     letter-spacing: 0.3px;
 }
 
-.steps_screen .form .after_caption {
+.form .after_caption {
     font-size: 16px;
     font-weight: 400;
     color: rgb(107, 107, 107);
@@ -823,12 +834,12 @@ h3 span::before {
     line-height: 1.3;
 }
 
-.steps_screen .form .wpcf7-form-control-wrap {
+.form .wpcf7-form-control-wrap {
     display: block;
     margin: 13px 0;
 }
 
-.steps_screen .form .wpcf7-form-control {
+.form .wpcf7-form-control {
     display: block;
     box-sizing: border-box;
     border: 1px solid rgb(168, 168, 168);
@@ -844,7 +855,7 @@ h3 span::before {
     padding: 10px 20px;
 }
 
-.steps_screen .form .button {
+.form .button {
     width: 100%;
     border: 1px solid rgb(196, 214, 0);
     box-shadow: 0 5px #c4d600;
@@ -853,7 +864,7 @@ h3 span::before {
     font-family: "ProximaNovaExCn";
 }
 
-.steps_screen .form input:not([type=submit]):focus {
+.form input:not([type=submit]):focus {
 	border: 1px solid #000082;
 }
 
@@ -863,7 +874,7 @@ h3 span::before {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 178px;
+    left: 183px;
     width: 500%;
 }
 
@@ -881,12 +892,7 @@ h3 span::before {
 }
 
 .advantages_screen h3 {
-    text-align: center;
     margin: 0 auto 25px;
-}
-
-.advantages_screen h3 span {
-    font-size: 40px;
 }
 
 .advantages_screen p {
@@ -902,7 +908,7 @@ h3 span::before {
 }
 
 .advantages_screen .advantages {
-    margin: 30px -25px 0;
+    margin: 25px -25px 0;
 }
 
 .advantages_screen .advantages .advantage {
@@ -1008,6 +1014,217 @@ h3 span::before {
     left: -68px;
 }
 
+/*license_screen*/
+
+.license_screen {
+    background: url(../images/eagle.png) #57aefe;
+    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 57px 0 70px;
+}
+
+.license_screen .inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.license_screen p {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    margin: 27px 0 53px;
+}
+
+.license_screen .licenses {
+    margin: 0 -25px;
+}
+
+.license_screen .license {
+    box-sizing: border-box;
+    width: 33.333%;
+    max-width: 316px;
+    padding: 0 25px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.license_screen .license_wr {
+    border: 6px solid rgb(255, 255, 255);
+    position: relative;
+}
+
+.license_screen .license img {
+    width: 100%;
+}
+
+.license_screen .license .scale {
+    background-image: url(../images/sprites.svg);
+    background-position: -285px -265px;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/*documents_screen*/
+
+.documents_screen {
+    padding: 57px 0 38px;
+}
+
+.documents_screen .documents {
+    margin: 38px -25px 0;
+}
+
+.documents_screen .document {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 0 25px;
+}
+
+.documents_screen .document .icon {
+    background-image: url(../images/documents_sprites.png);
+    background-position: -1px -858px;
+    width: 353px;
+    height: 261px;
+    margin: 0 auto;
+}
+
+.documents_screen .document.attachment .icon {
+    background-position: -177px -294px;
+}
+
+.documents_screen .document.certificate .icon {
+    background-position: -1px -600px;
+}
+
+.documents_screen .document .text {
+    padding: 20px 0;
+}
+
+.documents_screen .document .caption {
+    font-size: 24px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.documents_screen .document .description {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(65, 65, 65);
+    text-align: justify;
+    padding: 5px 0;
+    letter-spacing: 0.3px;
+}
+
+/*questions_screen*/
+
+.questions_screen {
+    background: url(../images/pattern.png) #ffc000;
+    background-position: center center;
+    padding: 30px 0;
+}
+
+.questions_screen .caption {
+  font-size: 40px;
+  font-family: "ProximaNovaExCn";
+  color: rgb(0, 38, 73);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.questions_screen .form {
+    padding: 38px 150px;
+    margin: 0;
+    text-align: center;
+}
+
+.questions_screen .form .caption {
+    font-size: 40px;
+    display: inline-block;
+}
+
+.questions_screen h3 {
+    display: inline-block;
+}
+
+.questions_screen .wpcf7 {
+    margin-top: 14px;
+}
+
+.questions_screen .wpcf7-form {
+    margin: 0 -15px;
+}
+
+.questions_screen .form .wpcf7-form-control-wrap {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 15px;
+    margin: 9px 0;
+}
+
+.questions_screen .form .wpcf7-form-control-wrap.mobile {
+    display: none;
+}
+
+.questions_screen .form .wpcf7-form-control-wrap .green.button {
+    box-shadow: 0 4px #c4d600;
+    padding: 11px 5px;
+}
+
+/*footer*/
+
+footer .first_footer {
+    background-color: #57aefe;
+    font-size: 24px;
+    font-family: "ProximaNovaExCn";
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 24px 0 40px;
+}
+
+footer .first_footer .contact {
+    padding-bottom: 15px;
+    max-width: 250px;
+}
+
+footer .first_footer .menu {
+    display: block;
+    margin: 6px 0 0;
+    padding: 0;
+}
+
+footer .first_footer .menu li {
+    list-style: none;
+    text-align: right;
+}
+
+footer .first_footer .menu a {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 5px 0;
+}
+
+footer .second_footer {
+    background-color: #002649;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 15px 0;
+}
+
+
 
 /*media*/
 
@@ -1016,7 +1233,7 @@ h3 span::before {
         padding: 0 15px;
     }
     
-    .navbar, .call.button, .login.button {
+    header .navbar, .call.button, .login.button {
         display: none;
     }
     
@@ -1132,12 +1349,11 @@ h3 span::before {
     
     .steps_screen .left_part {
         padding: 0;
-        max-width: 550px;
+        max-width: 540px;
     }
     
     .steps_screen .right_part {
         padding: 32px 0;
-        margin-left: 35px;
     }
     
     .steps_screen .steps .step {
@@ -1160,6 +1376,31 @@ h3 span::before {
     .discount_screen .girl {
         display: none;
     }
+    
+    .courses.second {
+        display: none;
+    }
+    
+    .license_screen {
+        padding: 48px 0 61px;
+    }
+    
+    .documents_screen {
+        padding: 47px 0 6px;
+    }
+    
+    .documents_screen .inner {
+        padding: 0 90px;
+    }
+    
+    .documents_screen .document {
+        width: 50%;
+        padding: 0 25px 30px;
+    }
+    
+    .questions_screen .form {
+        padding: 38px 47px;
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -1169,6 +1410,10 @@ h3 span::before {
     
     .advantages_screen .advantages .advantage {
         width: 50%;
+    }
+    
+    .documents_screen .inner {
+        padding: 0;
     }
 }
 
@@ -1284,6 +1529,10 @@ h3 span::before {
         line-height: 1.6;
     }
     
+    .steps_screen h3 span {
+        font-size: 34px;
+    }
+    
     h3 span {
         font-size: 34px;
     }
@@ -1335,6 +1584,99 @@ h3 span::before {
     .discount_screen .banner .details {
         font-size: 26px;
         text-transform: none;
+    }
+    
+    .license_screen {
+        background: #57aefe;
+        padding: 48px 0 15px;
+    }
+    
+    .license_screen p {
+        font-size: 15px;
+        margin: 22px 0 12px;
+        line-height: 1.6;
+    }
+    
+    .license_screen .license {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 25px 45px;
+    }
+    
+    .documents_screen .documents {
+        margin: 27px -25px 0;
+    }
+    
+    .documents_screen .document {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .documents_screen .document .icon {
+        width: 329px;
+        height: 241px;
+    }
+    
+    .questions_screen .form .wpcf7-form-control-wrap {
+        width: 100%;
+    }
+    
+    .questions_screen {
+        padding: 60px 0;
+    }
+    
+    .questions_screen .form {
+        padding: 38px 23px 54px;
+    }
+    
+    .questions_screen .wpcf7 {
+        margin-top: 6px;
+    }
+    
+    .questions_screen .form .caption {
+        font-size: 30px;
+    }
+    
+    .questions_screen .form h3 {
+        display: none;
+    }
+    
+    .questions_screen .form .wpcf7-form-control-wrap {
+        margin: 7px 0;
+    }
+    
+    .questions_screen .form .wpcf7-form-control-wrap.mobile {
+        display: block;
+    }
+    
+    .questions_screen .form .wpcf7-form-control-wrap .green.button {
+        padding: 17px 5px;
+    }
+    
+    footer .first_footer {
+        padding: 52px 0 45px;
+    }
+    
+    footer .first_footer .contacts {
+        width: 100%;
+        text-align: center;
+    }
+    
+    footer .first_footer .contacts .contact {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    footer .first_footer .menu {
+        margin: 25px 0 0;
+    }
+    
+    footer .first_footer .menu li {
+        text-align: center;
+    }
+    
+    footer .second_footer {
+        text-align: center;
     }
 }
 
