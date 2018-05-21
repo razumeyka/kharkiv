@@ -493,6 +493,22 @@ header .second_line .submenu li a {
 .courses .details {
     width: 760px;
     padding: 57px 0;
+    overflow: hidden;
+}
+
+.courses .details .viewport {
+    width: 100%;
+    position: relative;
+}
+
+.courses .details .slidewrapper {
+    width: 600%;
+}
+
+.courses .details .slidewrapper .slide {
+    width: 16.6666%;
+    float: left;
+    overflow: hidden;
 }
 
 .courses .details h2 {
@@ -597,6 +613,19 @@ header .second_line .submenu li a {
     font-family: "ProximaNovaCond";
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.courses .details .tables {
+    width: 200%;
+}
+
+.courses .details .tables:active {
+    margin-left: -100%;
+}
+
+.courses .details .tables .list {
+    width: 50%;
+    float: left;
 }
 
 .courses .details .line {
