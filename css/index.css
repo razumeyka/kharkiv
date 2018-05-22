@@ -432,12 +432,12 @@ header .second_line .submenu li a {
     width: 360px;
     box-sizing: border-box;
     box-shadow: 4px 0px 4px -4px rgba(0, 0, 0, 0.2);
-    padding: 25px 15px 75px 0; 
+    padding: 25px 0 75px; 
 }
 
 .courses .courses_menu {
     display: block;
-    margin: 0 0 35px 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -462,32 +462,46 @@ header .second_line .submenu li a {
 .courses .courses_menu a::before {
     content: "";
     background-image: url(../images/sprites.svg);
-    background-position: -242px -14px;
-    width: 45px;
-    height: 45px;
+    background-position: -243px -14px;
+    width: 42px;
+    height: 42px;
     position: absolute;
     left: 0;
     top: 10px;
 }
 
 .courses .courses_menu .psychology a::before {
-    background-position: -300px -14px;
+    background-position: -301px -14px;
 }
 
 .courses .courses_menu .pedagogy a::before {
-    background-position: -358px -14px;
+    background-position: -359px -14px;
 }
 
 .courses .courses_menu .before_school a::before {
-    background-position: -417px -14px;
+    background-position: -418px -14px;
 }
 
 .courses .courses_menu .additional a::before {
-    background-position: -475px -14px;
+    background-position: -476px -14px;
 }
 
 .courses .courses_menu .organisation a::before {
-    background-position: -533px -14px;
+    background-position: -535px -14px;
+}
+
+.courses .courses_menu li .outline {
+    display: none;
+    background-image: url(../images/arrow.svg);
+    position: absolute;
+    width: 420px;
+    height: 80px;
+    left: -27px;
+    bottom: -11px;
+}
+
+.courses .courses_menu li:active .outline {
+    display: block;
 }
 
 .courses .details {
@@ -609,6 +623,8 @@ header .second_line .submenu li a {
 }
 
 .courses .details .radio_button .radio_label {
+    display: inline-block;
+    vertical-align: middle;
     font-size: 16px;
     font-family: "ProximaNovaCond";
     font-weight: 400;
@@ -657,9 +673,6 @@ header .second_line .submenu li a {
     position: relative;
 }
 
-.courses .details .line .price .new_price {
-    
-}
 .courses .details .line .discount {
     position: absolute;
     top: -17px;
@@ -675,7 +688,6 @@ header .second_line .submenu li a {
 .courses .details .line .old_price {
     position: absolute;
     bottom: -18px;
-    right: 35px;
     width: 70px;;
     font-size: 12px;
     font-weight: 400;
@@ -749,12 +761,13 @@ h3 span::before {
 .steps_screen .steps_wrapper {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .steps_screen .left_part {
     box-sizing: border-box;
     padding: 56px 0 30px;
-    max-width: 800px;
+    flex: 1;
 }
 
 .steps_screen .steps {
@@ -827,13 +840,12 @@ h3 span::before {
     background-image: url(../images/sprites.svg);
     background-position: -977px -270px;
     height: 200px;
-    max-width: 300px;
 }
 
 .steps_screen .right_part {
     position: relative;
     padding: 70px 0;
-    max-width: 360px;
+    width: 360px;
     margin-left: 40px;
 }
 
@@ -914,6 +926,10 @@ h3 span::before {
     background-size: cover;
     background-position: center center;
     padding: 57px 0 45px;
+}
+
+.overflow {
+    overflow: hidden;
 }
 
 .advantages_screen .wrapper {
@@ -1046,11 +1062,12 @@ h3 span::before {
 /*license_screen*/
 
 .license_screen {
-    background: url(../images/eagle.png) #57aefe;
-    background-position: right;
-    background-size: auto;
-    background-repeat: no-repeat;
+    background-color: #57aefe;
     padding: 57px 0 70px;
+}
+
+.license_screen .wrapper {
+    position: relative;
 }
 
 .license_screen .inner {
@@ -1100,6 +1117,18 @@ h3 span::before {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+}
+
+.license_screen .background {
+    background: url(../images/eagle.png);
+    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 820px;
+    width: 795px;
+    right: -471px;
+    top: -33px;
 }
 
 /*documents_screen*/
@@ -1278,6 +1307,7 @@ footer .second_footer {
         width: 100%;
         text-align: center;
         background: #ffc000;
+        box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
     
     header .second_line .menu .for_mobile {
@@ -1378,11 +1408,15 @@ footer .second_footer {
     
     .steps_screen .left_part {
         padding: 0;
-        max-width: 540px;
     }
     
     .steps_screen .right_part {
         padding: 32px 0;
+    }
+    
+    .steps_screen .steps_wrapper  {
+        max-width: 970px;   
+        margin: 0 auto; 
     }
     
     .steps_screen .steps .step {
@@ -1414,6 +1448,10 @@ footer .second_footer {
         padding: 48px 0 61px;
     }
     
+    .license_screen .background {
+        display: none;
+    }
+    
     .documents_screen {
         padding: 47px 0 6px;
     }
@@ -1433,33 +1471,6 @@ footer .second_footer {
 }
 
 @media screen and (max-width: 1023px) {
-    .courses .courses_menu li {
-        width: 50%;
-    }
-    
-    .advantages_screen .advantages .advantage {
-        width: 50%;
-    }
-    
-    .documents_screen .inner {
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .between {
-        justify-content: center;
-    }
-    
-    header .first_line .institut_name {
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-    }
-    
-    .main_screen .main_info {
-        padding: 68px 0 50px;
-    }
     
     .main_screen h1 {
         font-size: 30px;
@@ -1467,72 +1478,13 @@ footer .second_footer {
     
     .main_screen h2 {
         font-size: 22px;
-        margin: 25px 0 32px;
     }
-    
-    .main_screen .buttons {
-        margin: 0 auto;
-    }
-    
-    .main_screen .buttons .green.button, .main_screen .buttons
-    .orange.button {
-        display: block;
-        width: 100%;
-        max-width: 330px;
-        margin: 0 auto 30px;
-    }
-    
     .courses .courses_menu li {
-        width: 100%;
-    }
-    
-    .courses .details {
-        padding: 5px 0 30px;
+        width: 50%;
     }
     
     .courses .details h3 {
         font-size: 22px;
-        margin: 0;
-    }
-    
-    .courses .details .radio_buttons {
-        padding: 5px;
-        margin: 12px 0 9px;
-    }
-    
-    .courses .details .radio_button {
-        display: block;
-        text-align: left;
-        padding: 10px 13px 10px 33px;
-    }
-    
-    .courses .details .radio_button .radio_label {
-        font-size: 14px;
-    }
-    
-    .courses .details .line {
-        font-size: 14px;
-        padding: 17px 0 15px;
-    }
-    
-    .courses .details .line .name {
-        width: 100%;
-        flex: auto;
-        margin-bottom: 10px;
-    }
-
-    .courses .details .line a {
-        flex: 1;
-    }
-    
-    .courses .details .line .discount {
-        top: 0px;
-        right: -2px;
-    }
-    
-    .courses .details .line .old_price {
-        bottom: -14px;
-        right: 40px;
     }
     
     .steps_screen .steps_wrapper {
@@ -1588,6 +1540,116 @@ footer .second_footer {
         line-height: 1.6;
     }
     
+    .advantages_screen .advantages .advantage {
+        width: 50%;
+    }
+    
+    .discount_screen .banner h4 {
+        font-size: 30px;
+    }
+    
+    .discount_screen .banner .details {
+        font-size: 26px;
+    }
+    
+    .license_screen p {
+        font-size: 15px;
+        margin: 22px 0 12px;
+        line-height: 1.6;
+    }
+    
+    .documents_screen .inner {
+        padding: 0;
+    }
+    
+    .questions_screen .form .caption {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .between {
+        justify-content: center;
+    }
+    
+    header .first_line .institut_name {
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
+    
+    .main_screen .main_info {
+        padding: 68px 0 50px;
+    }
+    
+    .main_screen h2 {
+        margin: 25px 0 32px;
+    }
+    
+    .main_screen .buttons {
+        margin: 0 auto;
+    }
+    
+    .main_screen .buttons .green.button, .main_screen .buttons
+    .orange.button {
+        display: block;
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto 30px;
+    }
+    
+    .courses .courses_menu li {
+        width: 100%;
+    }
+    
+    .courses .details {
+        padding: 5px 0 30px;
+    }
+    
+    .courses .details h3 {
+        margin: 0;
+    }
+    
+    .courses .details .radio_buttons {
+        padding: 5px;
+        margin: 12px 0 9px;
+    }
+    
+    .courses .details .radio_button {
+        display: block;
+        text-align: left;
+        padding: 10px 13px 10px 33px;
+    }
+    
+    .courses .details .radio_button .radio_label {
+        font-size: 14px;
+    }
+    
+    .courses .details .line {
+        font-size: 14px;
+        padding: 17px 0 15px;
+    }
+    
+    .courses .details .line .name {
+        width: 100%;
+        flex: auto;
+        margin-bottom: 10px;
+    }
+
+    .courses .details .line a {
+        flex: 1;
+    }
+    
+    .courses .details .line .discount {
+        top: 0px;
+        right: -2px;
+    }
+    
+    .courses .details .line .old_price {
+        bottom: -14px;
+        right: 40px;
+    }
+    
     .advantages_screen .advantages {
         margin: 22px auto 7px;
         padding: 0 32px;
@@ -1605,25 +1667,13 @@ footer .second_footer {
     .discount_screen .banner {
         padding: 65px 10px 84px;
     }
-
-    .discount_screen .banner h4 {
-        font-size: 30px;
-    }
     
     .discount_screen .banner .details {
-        font-size: 26px;
         text-transform: none;
     }
     
     .license_screen {
-        background: #57aefe;
         padding: 48px 0 15px;
-    }
-    
-    .license_screen p {
-        font-size: 15px;
-        margin: 22px 0 12px;
-        line-height: 1.6;
     }
     
     .license_screen .license {
@@ -1660,10 +1710,6 @@ footer .second_footer {
     
     .questions_screen .wpcf7 {
         margin-top: 6px;
-    }
-    
-    .questions_screen .form .caption {
-        font-size: 30px;
     }
     
     .questions_screen .form h3 {

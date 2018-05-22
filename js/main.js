@@ -18,7 +18,9 @@ $(document).ready(function(){
     var navBtnId = 0;
 	    
     $('.item').click(function(event) { 
-        event.preventDefault();   
+        event.preventDefault();
+        $('.item').find('.outline').removeClass('active');
+        $(this).find('.outline').addClass('active');
         navBtnId = $(this).index();
             $('.slidewrapper').css(
                 'margin-left','-'+navBtnId+'00%'); 
@@ -30,8 +32,7 @@ $(document).ready(function(){
         $(this).parent().find('.radio_button').removeClass('active');
         $(this).addClass('active');
         $(this).parent().addClass('changed');
-    });
-    
+    });   
         
     $('.radio_button.traine').click(function(){
         $('.tables').addClass('active');
