@@ -1,21 +1,5 @@
 @font-face {
   font-family: 'ProximaNova';
-  src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Light.otf')  format('opentype'),
-	     url('../fonts/ProximaNova-Light.woff') format('woff'), url('../fonts/ProximaNova-Light.ttf')  format('truetype'), url('../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ProximaNova';
-  src: url('../fonts/ProximaNova-LightIt.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-LightIt.otf')  format('opentype'),
-	     url('../fonts/ProximaNova-LightIt.woff') format('woff'), url('../fonts/ProximaNova-LightIt.ttf')  format('truetype'), url('../fonts/ProximaNova-LightIt.svg#ProximaNova-LightIt') format('svg');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'ProximaNova';
   src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Regular.otf')  format('opentype'),
 	     url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf')  format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
   font-weight: 400;
@@ -24,33 +8,9 @@
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url('../fonts/ProximaNova-RegularIt.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-RegularIt.otf')  format('opentype'),
-	     url('../fonts/ProximaNova-RegularIt.woff') format('woff'), url('../fonts/ProximaNova-RegularIt.ttf')  format('truetype'), url('../fonts/ProximaNova-RegularIt.svg#ProximaNova-RegularIt') format('svg');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'ProximaNova';
   src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Bold.otf')  format('opentype'),
 	     url('../fonts/ProximaNova-Bold.woff') format('woff'), url('../fonts/ProximaNova-Bold.ttf')  format('truetype'), url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ProximaNova';
-  src: url('../fonts/ProximaNova-BoldIt.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-BoldIt.otf')  format('opentype'),
-	     url('../fonts/ProximaNova-BoldIt.woff') format('woff'), url('../fonts/ProximaNova-BoldIt.ttf')  format('truetype'), url('../fonts/ProximaNova-BoldIt.svg#ProximaNova-BoldIt') format('svg');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'ProximaNova';
-  src: url('../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Black.otf')  format('opentype'),
-	     url('../fonts/ProximaNova-Black.woff') format('woff'), url('../fonts/ProximaNova-Black.ttf')  format('truetype'), url('../fonts/ProximaNova-Black.svg#ProximaNova-Black') format('svg');
-  font-weight: 900;
   font-style: normal;
 }
 
@@ -67,14 +27,6 @@
   src: url('../fonts/ProximaNovaCond-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNovaCond-Bold.otf')  format('opentype'),
 	     url('../fonts/ProximaNovaCond-Bold.woff') format('woff'), url('../fonts/ProximaNovaCond-Bold.ttf')  format('truetype'), url('../fonts/ProximaNovaCond-Bold.svg#ProximaNovaCond-Bold') format('svg');
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ProximaNovaCond';
-  src: url('../fonts/ProximaNovaCond-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNovaCond-Black.otf')  format('opentype'),
-	     url('../fonts/ProximaNovaCond-Black.woff') format('woff'), url('../fonts/ProximaNovaCond-Black.ttf')  format('truetype'), url('../fonts/ProximaNovaCond-Black.svg#ProximaNovaCond-Black') format('svg');
-  font-weight: 900;
   font-style: normal;
 }
 
@@ -432,7 +384,7 @@ header .second_line .submenu li a {
     width: 360px;
     box-sizing: border-box;
     box-shadow: 4px 0px 4px -4px rgba(0, 0, 0, 0.2);
-    padding: 25px 0 75px; 
+    padding: 25px 30px 75px 0; 
 }
 
 .courses .courses_menu {
@@ -455,7 +407,7 @@ header .second_line .submenu li a {
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 19px 10px 17px 60px;
+    padding: 19px 0 17px 60px;
     letter-spacing: 0.4px;
 }
 
@@ -490,7 +442,7 @@ header .second_line .submenu li a {
     background-position: -535px -14px;
 }
 
-.courses .courses_menu li .outline {
+.courses .courses_menu .item .outline {
     display: none;
     background-image: url(../images/arrow.svg);
     position: absolute;
@@ -498,9 +450,10 @@ header .second_line .submenu li a {
     height: 80px;
     left: -27px;
     bottom: -11px;
+    z-index: -1;
 }
 
-.courses .courses_menu li:active .outline {
+.courses .courses_menu .item .outline.active {
     display: block;
 }
 
@@ -635,7 +588,7 @@ header .second_line .submenu li a {
     width: 200%;
 }
 
-.courses .details .tables:active {
+.courses .details .tables.active {
     margin-left: -100%;
 }
 
@@ -688,7 +641,6 @@ header .second_line .submenu li a {
 .courses .details .line .old_price {
     position: absolute;
     bottom: -18px;
-    width: 70px;;
     font-size: 12px;
     font-weight: 400;
     color: rgb(138, 138, 138);
@@ -932,12 +884,17 @@ h3 span::before {
     overflow: hidden;
 }
 
-.advantages_screen .wrapper {
+.advantages_screen .inner {
     max-width: 900px;
+    margin: 0 auto;
 }
 
 .advantages_screen h3 {
     margin: 0 auto 25px;
+}
+
+.advantages_screen h3 span::before {
+    width: 87%;
 }
 
 .advantages_screen p {
@@ -967,6 +924,8 @@ h3 span::before {
     border: 2px dashed rgb(32, 129, 218);
     background-color: rgb(255, 255, 255);
     padding: 25px 10px;
+    height: 100%;
+    width: 265px;
 }
 
 .advantages_screen .advantages .advantage .icon {
@@ -1008,7 +967,7 @@ h3 span::before {
 /*discount_screen*/
 
 .discount_screen {   
-    background: url(../images/pattern.png) #ffc000;
+    background: url(../images/pattern.png) #ffc000 no-repeat;
     background-position: center center;
     padding: 73px 0;
 }
@@ -1106,6 +1065,7 @@ h3 span::before {
 }
 
 .license_screen .license .scale {
+    display: none;
     background-image: url(../images/sprites.svg);
     background-position: -285px -265px;
     height: 60px;
@@ -1117,6 +1077,10 @@ h3 span::before {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+}
+
+.license_screen .license:hover .scale {
+    display: block;
 }
 
 .license_screen .background {
@@ -1148,15 +1112,15 @@ h3 span::before {
 }
 
 .documents_screen .document .icon {
-    background-image: url(../images/documents_sprites.png);
-    background-position: -1px -858px;
+    background: url(../images/documents_sprites.png) no-repeat;
+    background-position: -1px -1px;
     width: 353px;
     height: 261px;
     margin: 0 auto;
 }
 
 .documents_screen .document.attachment .icon {
-    background-position: -177px -294px;
+    background-position: -1px -294px;
 }
 
 .documents_screen .document.certificate .icon {
@@ -1247,12 +1211,18 @@ footer .first_footer {
     font-family: "ProximaNovaExCn";
     font-weight: 400;
     color: rgb(255, 255, 255);
-    padding: 24px 0 40px;
+    padding: 24px 0 47px;
 }
 
 footer .first_footer .contact {
-    padding-bottom: 15px;
+    padding: 11px 0 4px;
     max-width: 250px;
+}
+
+footer .first_footer a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 footer .first_footer .menu {
@@ -1376,6 +1346,10 @@ footer .second_footer {
         left: 20px;
     }
     
+    .courses .courses_menu .item .outline.active {
+        display: none;
+    }
+    
     .courses .sidebar .button {
         display: none;
     }
@@ -1452,6 +1426,10 @@ footer .second_footer {
         display: none;
     }
     
+    .license_screen .license:hover .scale {
+        display: none;
+    }
+    
     .documents_screen {
         padding: 47px 0 6px;
     }
@@ -1489,10 +1467,15 @@ footer .second_footer {
     
     .steps_screen .steps_wrapper {
         flex-wrap: wrap;
+        flex-direction: column;
     }
     
     .steps_screen .left_part {
         margin: 0 auto;
+    }
+    
+    .steps_screen .steps {
+        flex-direction: column;
     }
     
     .steps_screen .right_part {
@@ -1531,6 +1514,10 @@ footer .second_footer {
         display: none;
     }
     
+    .advantages_screen {
+        background: none;
+    }
+    
     .advantages_screen h3 span {
         font-size: 34px;
     }
@@ -1540,8 +1527,17 @@ footer .second_footer {
         line-height: 1.6;
     }
     
+    .advantages_screen .advantages {
+        margin: 25px auto 0;
+        max-width: 630px;
+    }
+    
     .advantages_screen .advantages .advantage {
         width: 50%;
+    }
+    
+    .advantages_screen .advantages .advantage_wrapper {
+        margin: 0 auto;
     }
     
     .discount_screen .banner h4 {
@@ -1554,8 +1550,17 @@ footer .second_footer {
     
     .license_screen p {
         font-size: 15px;
-        margin: 22px 0 12px;
+        margin: 22px 0 40px;
         line-height: 1.6;
+    }
+    
+    .license_screen .licenses {
+        flex-direction: column;
+    }
+    
+    .license_screen .licenses .license {
+        margin: 0 auto;
+        padding: 0 25px 45px;
     }
     
     .documents_screen .inner {
@@ -1647,7 +1652,6 @@ footer .second_footer {
     
     .courses .details .line .old_price {
         bottom: -14px;
-        right: 40px;
     }
     
     .advantages_screen .advantages {
@@ -1678,16 +1682,16 @@ footer .second_footer {
     
     .license_screen .license {
         width: 100%;
-        margin: 0 auto;
-        padding: 0 25px 45px;
     }
     
     .documents_screen .documents {
         margin: 27px -25px 0;
+        flex-direction: column;
     }
     
     .documents_screen .document {
         width: 100%;
+        max-width: 400px;
         margin: 0 auto;
     }
     
@@ -1706,6 +1710,8 @@ footer .second_footer {
     
     .questions_screen .form {
         padding: 38px 23px 54px;
+        max-width: 360px;
+        margin: 0 auto;
     }
     
     .questions_screen .wpcf7 {
@@ -1732,9 +1738,8 @@ footer .second_footer {
         padding: 52px 0 45px;
     }
     
-    footer .first_footer .contacts {
-        width: 100%;
-        text-align: center;
+    footer .first_footer a {
+        margin: 0 auto;
     }
     
     footer .first_footer .contacts .contact {
@@ -1743,7 +1748,7 @@ footer .second_footer {
     }
     
     footer .first_footer .menu {
-        margin: 25px 0 0;
+        margin: 35px 0 0;
     }
     
     footer .first_footer .menu li {
@@ -1755,6 +1760,9 @@ footer .second_footer {
     }
 }
 
-@media screen and (max-width: 500px) {
-
+@media screen and (max-width: 450px) {
+    .steps_screen .right_part {
+        width: 100%;
+    }
 }
+

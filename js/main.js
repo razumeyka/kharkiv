@@ -1,32 +1,31 @@
-$(document).ready(function(){    
-    $( '.burger' ).click( function() {
-        if ( $( '.navbar' ).is( ':hidden' ) ) {
-    $( '.navbar' ).show('slideToggle');
-    $( '.burger' ).addClass( 'active' );
-        } else {
-    $( '.navbar' ).hide('slideToggle');
-    $( '.burger' ).removeClass( 'active' );
-        }
+$(document).ready(function(){
+
+//mobile menu   
+    $( '.burger' ).click( function() { 
+        $( '.navbar' ).slideToggle();
+        $( '.burger' ).toggleClass( 'active' ); 
     });
-        
-    $('.second_line .menu li' ).click(function(){
+
+	 $('.second_line .menu li' ).click(function(){
         $(this).find('.submenu').slideToggle(500);
-    });
-    
-    var slideNow = 1;   
-    var slideCount = console.log($('.slidewrapper .slide').length);
-    var navBtnId = 0;
-	    
-    $('.item').click(function(event) { 
-        event.preventDefault();
+    });		
+		
+// courses block
+
+    $('.item').click(function(e) { 
+		console.log('click');
+        e.preventDefault();
         $('.item').find('.outline').removeClass('active');
         $(this).find('.outline').addClass('active');
-        navBtnId = $(this).index();
-            $('.slidewrapper').css(
-                'margin-left','-'+navBtnId+'00%'); 
+        navBtnId = $(this).index(); 
+        $('.slidewrapper').css('margin-left','-'+navBtnId+'00%'); 
     });
-    
+   
+//radiobuttons ripples
+   
     $('.radio_button input[checked="checked"]').closest('.radio_button').addClass('active');
+	
+//radiobuttons переключение блоков	
 
     $('.radio_button').click(function(){
         $(this).parent().find('.radio_button').removeClass('active');
